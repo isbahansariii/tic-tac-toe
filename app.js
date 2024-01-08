@@ -18,6 +18,7 @@ let turn = true;
 let i = 0;
 let player1, player2;
 let start = true;
+let boolWinner = true;
 
 let getName = () => {
   player1 = prompt("Enter name of player#1: ");
@@ -47,18 +48,18 @@ const enableBtns = () => {
   }
 };
 
-let Draw = () => {
-  if (i === 9) {
-    win.innerText = `Match Draw!`;
-    container.classList.remove("hide");
-  }
-};
-
 const showWinner = (winner) => {
   disableBtns();
   if (winner === "O")   win.innerText = `Congradulations, ${player1} won.`;
   else                  win.innerText = `Congradulations, ${player2} won.`;
   container.classList.remove("hide");
+};
+
+let Draw = () => {
+  if (i === 9 && boolWinner === true) {
+    win.innerText = `Match Draw!`;
+    container.classList.remove("hide");
+  }
 };
 
 const checkWinner = () => {
@@ -68,7 +69,10 @@ const checkWinner = () => {
     let p3 = buttons[pattern[2]].innerText;
 
     if (p1 != "" && p2 != "" && p3 != "")
-      if (p1 === p2 && p2 === p3) showWinner(p1);
+      if (p1 === p2 && p2 === p3) {
+        showWinner(p1);
+        boolWinner = false;
+      }
   }
 };
 
