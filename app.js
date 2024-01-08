@@ -35,6 +35,8 @@ let resetBtn = () => {
   i = 0;
   turn = true;
   enableBtns();
+  boolWinner = true;
+  container.classList.add("class", "hide");
 };
 const disableBtns = () => {
   for (let btn of buttons) {
@@ -56,6 +58,7 @@ const showWinner = (winner) => {
 };
 
 let Draw = () => {
+  console.log(boolWinner)
   if (i === 9 && boolWinner === true) {
     win.innerText = `Match Draw!`;
     container.classList.remove("hide");
