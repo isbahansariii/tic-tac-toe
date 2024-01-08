@@ -44,6 +44,9 @@ button {
   font-weight: bold;
   box-shadow: 0 0 0.6rem rgb(0, 0, 0.1);
 }
+#newGame, #resetGame{
+  margin-top: 1rem;
+}
 
 .container2 {
   height: 100vh;
