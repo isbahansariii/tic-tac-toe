@@ -1,5 +1,6 @@
 let buttons = document.querySelectorAll(".btn");
 let reset = document.querySelector("#reset");
+let resetGame = document.querySelector("#resetGame");
 let newGame = document.querySelector("#newGame");
 let win = document.querySelector(".win");
 let container = document.querySelector(".container");
@@ -100,4 +101,5 @@ buttons.forEach((button) => {
 });
 
 reset.addEventListener("click", resetBtn);
+resetGame.addEventListener("click", resetBtn);
 newGame.addEventListener("click", newGameBtn);
