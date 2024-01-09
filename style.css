@@ -13,6 +13,7 @@ main {
   flex-direction: column;
   gap: 5%;
 }
+
 .container {
   display: flex;
   align-items: center;
@@ -83,6 +84,15 @@ button {
 .hide {
   display: none;
 }
+
+.winScore{
+  background-color: #b80000;
+  color:#ff9800;
+  border-radius: 10px;
+  text-align: start;
+  padding: 10px;
+}
+
 
 @media (min-width: 1700px) {
   button {
